@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace UzsakymuSistema
 {
-    class Program
+    public class Program : User
     {
         static void Main(string[] args)
         {
+            List<User> userList = new List<User>();
+            User userObject = new User();
+            userList.Add(userObject.userRegistration("username", "password", "email", "phoneNumber"));
         }
     }
 }
