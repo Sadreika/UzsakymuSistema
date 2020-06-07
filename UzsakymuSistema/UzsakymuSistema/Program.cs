@@ -12,8 +12,10 @@ namespace UzsakymuSistema
         {
             List<User> userList = new List<User>();
             User userObject = new User();
-            userList.Add(userObject.userRegistration("username", "password", "email", "phoneNumber"));
-            userList.Add(userObject.userRegistration("username", "password", "email", "phoneNumber"));
+            databaseClass databaseClassObject = new databaseClass();
+            //databaseClassObject.cleaningDataBase();
+            databaseClassObject.userRegistration(Int16.Parse(databaseClassObject.searchingForMaxId()) + 1, "username", "password", "email", "phoneNumber");
+
         }
     }
 }
