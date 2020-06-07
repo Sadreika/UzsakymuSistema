@@ -15,7 +15,6 @@ namespace UzsakymuSistema
             databaseClass databaseClassObject = new databaseClass();
             //databaseClassObject.cleaningDataBase();
             databaseClassObject.userRegistration(Int16.Parse(databaseClassObject.searchingForMaxId()) + 1, "username", "password", "email", "phoneNumber");
-
         }
     }
 }
